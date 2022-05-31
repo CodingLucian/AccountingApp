@@ -4,7 +4,7 @@
   "description": "backend challenge",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "type": "commonjs",
   "author": "Lucas Seijo",
