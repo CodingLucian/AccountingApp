@@ -17,6 +17,7 @@ export const ContextProvider = (props) => {
     let useremail = localStorage.getItem('userEmail');
     fetch(`${URL}/movement/`,
       {
+        mode:'cors',
         method: 'GET',
         headers: {
           Authorization: 'Bearer ' + token,
@@ -56,6 +57,7 @@ export const ContextProvider = (props) => {
     let token = localStorage.getItem('tokenProp');
     fetch(`${URL}/movement/${id}`,
       {
+        mode:'cors',
         method: 'DELETE',
         headers: {
           Authorization: 'Bearer ' + token,
@@ -100,6 +102,7 @@ export const ContextProvider = (props) => {
     let token = localStorage.getItem('tokenProp');
     let useremail = localStorage.getItem('userEmail');
     fetch(`${URL}/movement`, {
+      mode:'cors',
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + token,
@@ -116,6 +119,7 @@ export const ContextProvider = (props) => {
   const editOperation = (id, input, setLocalModal) => {
     let token = localStorage.getItem('tokenProp');
     fetch(`${URL}/movement/${id}`, {
+      mode:'cors',
           method: 'PUT',
           headers: {
             Authorization: 'Bearer ' + token,
@@ -151,6 +155,7 @@ export const ContextProvider = (props) => {
   const login = (user) => {
     console.log('user login globalcontext--> ', user)
     fetch(`${URL}/user/login`, {
+      mode:'cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
