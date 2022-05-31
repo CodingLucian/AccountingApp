@@ -132,6 +132,7 @@ export const ContextProvider = (props) => {
   const register = (user) => {
     console.log('user register globalcontext--> ', user)
     fetch(`${URL}/user/register`, {
+      mode:'cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
